@@ -53,6 +53,7 @@
                     </container>
                     <configuration>
                         <type>standalone</type>
+                    </configuration>
                         <deployables>
                             <deployable>
                                 <groupId>com.datacenterhawk</groupId>
@@ -63,7 +64,6 @@
                                 </properties>
                             </deployable>
                         </deployables>
-                    </configuration>
                 </configuration>
                 <executions>
                     <execution>
