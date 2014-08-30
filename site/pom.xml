@@ -57,7 +57,7 @@
                         <deployables>
                             <deployable>
                                 <groupId>com.mycompany</groupId>
-                                <artifactId>ecommerce-website</artifactId>
+                                <artifactId>site</artifactId>
                                 <type>war</type>
                                 <properties>
                                     <context>ROOT</context>
