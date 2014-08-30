@@ -56,7 +56,7 @@
                     </configuration>
                         <deployables>
                             <deployable>
-                                <groupId>com.datacenterhawk</groupId>
+                                <groupId>com.mycompany</groupId>
                                 <artifactId>site-war</artifactId>
                                 <type>war</type>
                                 <properties>
