@@ -32,53 +32,6 @@
             </plugin>
 
             <plugin>
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven2-plugin</artifactId>
-                <configuration>
-                    <container>
-                        <containerId>tomcat7x</containerId>
-                        <zipUrlInstaller>
-                            <url>http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.55/bin/apache-tomcat-7.0.55.zip</url>
-                        </zipUrlInstaller>
-                        <dependencies>
-                            <dependency>
-                                <groupId>javax.activation</groupId>
-                                <artifactId>activation</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>javax.mail</groupId>
-                                <artifactId>mail</artifactId>
-                            </dependency>
-                        </dependencies>
-                    </container>
-                    <configuration>
-                        <type>standalone</type>
-                    </configuration>
-                        <deployables>
-                            <deployable>
-                                <groupId>com.mycompany</groupId>
-                                <artifactId>site</artifactId>
-                                <type>war</type>
-                                <properties>
-                                    <context>ROOT</context>
-                                </properties>
-                            </deployable>
-                        </deployables>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>install</goal>
-                            <goal>configure</goal>
-                            <goal>deploy</goal>
-                            <goal>package</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>2.4.1</version>
                 <configuration>
@@ -88,9 +41,9 @@
                             <includes>
                                 <include>**/*</include>
                             </includes>
-                            <!-- This exclusion is only necessary in the site project is for the Tomcat plugin that will be addressed a little later -->
                             <excludes>
-                                <exclude>cargo/**</exclude>
+                                <exclude>dependency/**</exclude>
+                                <exclude>*.war</exclude>
                             </excludes>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
@@ -104,6 +57,30 @@
                         <goals>
                             <goal>clean</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.8</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.eclipse.jetty</groupId>
+                                    <artifactId>jetty-runner</artifactId>
+                                    <version>9.2.2.v20140723</version>
+                                    <destFileName>jetty-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
