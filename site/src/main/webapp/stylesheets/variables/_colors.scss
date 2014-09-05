@@ -1,0 +1,60 @@
+// Element Colors
+$black: #231f20; // Body font
+$blue: #2296d1;
+$blue-dark: #2484b5;
+$blue-darker: #1e688f;
+$blue-light: lighten($blue, 40%);
+$blue-lighter: #ecf6fb;
+$orange: #f58f31;
+$white: #ffffff;
+
+// Neutrals
+$gray: #787878;
+$gray-dark: #3f3e3e;
+$gray-light: #e1e1e1;
+$gray-lighter: #e1e1e1;
+$gray-lightest: #f5f5f5;
+
+// Secondary Neutrals
+$neut-1: #f8f8f8;
+$neut-2: #fbfbfb;
+$neut-3: #f4f4f4;
+$neut-4: #f3f3f3;
+$neut-5: #ececec;
+
+// Font Colors
+$font-green: #b8d988;
+$font-orange: $orange;
+$font-red: #ef5d2f;
+$text: #231f20;
+$light_text: #cecece;
+$link_text: #44aadd;
+
+// Chart Colors
+$chart-transparency: .3;
+$chart-transparency-light: .7;
+$chart-transparency-lighter: .85;
+
+$chart-blue: transparentize(#2099d4, $chart-transparency);
+$chart-blue-light: transparentize(#2099d4, $chart-transparency-light);
+$chart-blue-lighter: transparentize(#2099d4, $chart-transparency-lighter);
+
+$chart-green: transparentize(#99cb50, $chart-transparency);
+$chart-green-light: transparentize(#99cb50, $chart-transparency-light);
+$chart-green-lighter: transparentize(#99cb50, $chart-transparency-lighter);
+
+$chart-red: transparentize(#f1612b, $chart-transparency);
+$chart-red-light: transparentize(#f1612b, $chart-transparency-light);
+$chart-red-lighter: transparentize(#f1612b, $chart-transparency-lighter);
+
+$chart-orange: transparentize(#ffd67f, $chart-transparency);
+$chart-orange-light: transparentize(#ffd67f, $chart-transparency-light);
+$chart-orange-lighter: transparentize(#ffd67f, $chart-transparency-lighter);
+
+$chart-gray: transparentize(#aba7d1, $chart-transparency);
+$chart-gray-lighter: transparentize(#aba7d1, $chart-transparency-light);
+$chart-gray-light: transparentize(#aba7d1, $chart-transparency-lighter);
+
+$chart-purple: transparentize(#8781bd, $chart-transparency);
+$chart-purple-light: transparentize(#8781bd, $chart-transparency-light);
+$chart-purple-lighter: transparentize(#8781bd, $chart-transparency-lighter);

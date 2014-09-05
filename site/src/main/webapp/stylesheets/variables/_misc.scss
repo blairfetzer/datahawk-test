@@ -1,0 +1,74 @@
+// Border Radius
+$radius-sm: 3px;
+$radius: 5px;
+$radius-lg: 8px;
+
+// Font Size
+// Nested ems are proportional to thier parent em
+$font-xxsm: .5625em; // 10px
+$font-xsm: .6875em; // 11px
+$font-sm: .75em; // 12px
+$font: .875em; // 14px
+$font-md: 1.125em; // 18px
+$font-mlg: 1.25em; // 20px
+$font-lg: 1.5em; // 24px
+$font-xlg: 1.75em; // 28px
+$font-xxlg: 2.5em; // 40px
+
+// Icon variables have to be added manually
+// after updating Icomoon files
+$icon-list: \e600;
+$icon-flow-tree: \e601;
+$icon-arrow-left: \e602;
+$icon-arrow-down: \e603;
+$icon-arrow-up: \e604;
+$icon-arrow-right: \e605;
+$icon-thumbs-up: \e606;
+$icon-thumbs-down: \e607;
+$icon-stop: \e608;
+$icon-search: \e609;
+$icon-warning: \e60a;
+$icon-disk: \e60b;
+$icon-minus: \e60c;
+$icon-plus: \e60d;
+$icon-cross: \e60e;
+$icon-checkmark: \e60f;
+$icon-star: \e610;
+$icon-gauge: \e611;
+$icon-record: \e612;
+$icon-x: \e613;
+$icon-refresh: \e614;
+$icon-export: \e615;
+$icon-transfer: \e616;
+$icon-alt-arrow-right: \e617;
+$icon-filter: \e618;
+$icon-folder: \e619;
+$icon-home: \e620;
+$icon-folder-open: \e61a;
+$icon-users: \e61b;
+$icon-pencil: \e61c;
+$icon-remove: \e61d;
+$icon-cog: \e61e;
+$icon-skull: \e61f;
+$icon-user: \e628;
+$icon-th: \e632;
+// Add Icon Mixin
+$icon-font-size: 1.4em;
+$icon-inner-padding: .4375em;
+
+// Breakpoints
+$bp-sm: 64em;
+$bp-sm-1: 70em;
+$bp-sm-2: 80em;
+$bp-md: 90em;
+$bp-md-1: 100em;
+$bp-md-2: 110em;
+$bp-lg: 122.5em;
+$bp-lg-1: 130em;
+$bp-lg-2: 140em;
+$retina: 2 device-pixel-ratio;
+
+// Built-in Compass transition configuration variables
+// http://compass-style.org/reference/compass/css3/transition/
+$default-transition-duration: 0.3s;
+$default-transition-function: ease;
