@@ -7,8 +7,8 @@ export CATALINA_BASE
 
 #remove the extraneous webapps that we don't need
 rm -rf $CATALINA_BASE/webapps/cargocpc*
-rm -rf $CATALINA_BASE/host-manager
-rm -rf $CATALINA_BASE/manager
+rm -rf $CATALINA_BASE/webapps/host-manager
+rm -rf $CATALINA_BASE/webapps/manager
 
 #copy over the Heroku config files
 cp ./site/heroku-server.xml $CATALINA_BASE/conf/server.xml

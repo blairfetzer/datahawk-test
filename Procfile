@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar site/target/dependency/jetty-runner.jar --port $PORT site/target/*.war
+web: sh start-heroku.sh
