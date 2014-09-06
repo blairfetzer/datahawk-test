@@ -1,18 +1,46 @@
-<header>
-    <div id="header_content">
-        <div id="cart_info">
+<header class="container navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
 
-            <div th:if="${customer.anonymous}"  th:remove="tag">
-
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">HAWK Tool Suite <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Hawk Search</a></li>
+            <li><a href="#">Hawk Zoom</a></li>
+            <li><a href="#">Hawk Scope</a></li>
+            <li><a href="#">Hawk Compare</a></li>
+            <li><a href="#">Hawk Financials</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li>
+          <div th:if="${customer.anonymous}"  th:remove="tag">
                 <a class="account" th:href="@{/login}">
                     <span th:text="#{home.login}">Login</span>
                 </a>
-                &nbsp;|&nbsp; 
+            </div>
+        </li>
+        <li>
+          <div th:if="${customer.anonymous}"  th:remove="tag">
                 <a class="account" th:href="@{/register}">
                     <span th:text="#{home.register}">Register</span>
                 </a>
-                &nbsp;|&nbsp; 
             </div>
+        </li>
+        <li>
             <div th:unless="${customer.anonymous}" th:remove="tag">
                 <span><span th:text="#{home.welcome}">Welcome</span>, <a class="my-account" th:href="@{/account}" th:text="${customer.firstName}"></a></span>
                 &nbsp;|&nbsp; 
@@ -21,50 +49,8 @@
                 </a>
                 &nbsp;|&nbsp; 
             </div>
-
-
-            <a id="cartLink" class="modalcart" th:href="@{/cart}">
-                <img th:src="@{/img/shopping_cart.png}" alt="Shopping Cart Icon" />
-                &nbsp; 
-                <span id="headerCartItemWordSingular_i18n" style="display: none;" th:text="#{home.item}" />
-                <span id="headerCartItemWordPlural_i18n" style="display: none;" th:text="#{home.items}" />
-                <span class="headerCartItemsCount" th:text="${cart.itemCount}" />
-                <span class="headerCartItemsCountWord" th:text="${cart.itemCount == 1} ? #{home.item} :  #{home.items}" />
-            </a>
-
-        </div>
-
-        <div id="languages">
-            <span id="selectedLocale" th:text="${session.blLocale.localeCode}" style="display: none" />
-
-            <a href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'en_US')">
-                <img id="en_US" src="img/flags/United-States.png" th:src="@{/img/flags/United-States.png}" alt="United States" title="English" />
-            </a>
-
-            <a href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'en_GB')">
-                <img id="en_GB" src="img/flags/United-Kingdom.png" th:src="@{/img/flags/United-Kingdom.png}" alt="United Kingdom" title="English (UK)"/>
-            </a>
-
-            <a  href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'es_MX')">
-                <img id="es_MX" src="img/flags/Mexico.png" th:src="@{/img/flags/Mexico.png}" alt="Mexico" title="Spanish (Mexico)"/>
-            </a>
-
-            <a href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'es_ES')">
-                <img id="es_ES" src="img/flags/Mexico.png" th:src="@{/img/flags/Spain.png}" alt="Spain" title="Spanish (Spain)"/>
-            </a>
-            <a href="javascript:;" onclick="BLC.addUrlParam(document.location.search, 'blLocaleCode', 'fr_FR')">
-                <img id="fr_FR" src="img/flags/Mexico.png" th:src="@{/img/flags/France.png}" alt="France" title="French (France)" />
-            </a>
-
-        </div>
-
-        <div id="logo"><h1><a th:href="@{/}">The Heat Clinic Home</a></h1></div>
-        
-        <div id="search">
-            <blc:form th:action="@{/search}" method="GET">
-            <input type="search" class="search" name="q" th:value="${originalQuery}" />
-            <input type="submit" id="search_button" value="go" />
-            </blc:form>
-        </div>
-    </div>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </header>
