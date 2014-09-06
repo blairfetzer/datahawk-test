@@ -109,7 +109,6 @@
                                 <include>**/*</include>
                             </includes>
                             <excludes>
-                                <exclude>datacenterhawk.war</exclude>
                                 <exclude>cargo/**</exclude>
                             </excludes>
                             <followSymlinks>false</followSymlinks>
