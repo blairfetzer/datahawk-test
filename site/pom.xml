@@ -78,7 +78,7 @@
                 </executions>
             </plugin>
 
-            <plugin>
+<!--            <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>2.4.1</version>
                 <configuration>
@@ -105,7 +105,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
 
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
